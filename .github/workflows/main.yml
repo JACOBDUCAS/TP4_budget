@@ -15,12 +15,11 @@ jobs:
     - name: Run tests
       run: python myscript.py
 
-      - name: Capture bisect log
-  run: echo "::set-output name=bisect-log::$(cat bisect_log.txt)"
-
-- name: Upload bisect log
-  if: always()
-  uses: actions/upload-artifact@v2
-  with:
-    name: bisect-log
-    path: bisect_log.txt
+    - name: Capture bisect log
+      run: echo "::set-output name=bisect-log::$(cat bisect_log.txt)"
+    - name: Upload bisect log
+      if: always()
+      uses: actions/upload-artifact@v2
+      with:
+        name: bisect-log
+        path: bisect_log.txt
