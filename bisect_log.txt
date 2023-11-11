@@ -1,0 +1,12 @@
+# bad: [c1a4be04b972b6c17db242fc37752ad517c29402] Minor change
+# good: [e4cfc6f77ebbe2e23550ddab682316ab4ce1c03c] Add a truly working project
+git bisect start 'c1a4be04b972b6c17db242fc37752ad517c29402' 'e4cfc6f77ebbe2e23550ddab682316ab4ce1c03c'
+# bad: [33827ba712f81ebc7c1fc935e8115e9a49065a9a] Minor change
+git bisect bad 33827ba712f81ebc7c1fc935e8115e9a49065a9a
+# bad: [0d3750706bd6f6a2e176732a8199272e11ab894a] Other change
+git bisect bad 0d3750706bd6f6a2e176732a8199272e11ab894a
+# bad: [88bdab68130b43c0a5ba7d4081865bf306551c68] Some style change
+git bisect bad 88bdab68130b43c0a5ba7d4081865bf306551c68
+# bad: [d41396a2491474c9941990ecf3e4a32b18630f92] Add some minor changes
+git bisect bad d41396a2491474c9941990ecf3e4a32b18630f92
+# first bad commit: [d41396a2491474c9941990ecf3e4a32b18630f92] Add some minor changes
